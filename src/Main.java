@@ -1,5 +1,5 @@
 /*
- * Exercice 1 : Trouvez comment générer un nombre mystère compris entre 1 et 100.
+ * Exercice 1 : Trouvez comment générer un nombre mystère compris entre 1 et 100.👍
  * (Voir Classe Math sur la java doc)
  * Comment peut-on tester si le code que l'on a écrit est correct ?
  * <p>
@@ -7,17 +7,17 @@
  * int nombreRandom = 50;
  * Il faudra toutefois principe que le nombre est généré aléatoirement pour les prochains exercices !
  * <p>
- * Exercice 2 : Commenter son code est important ! Commente le code afin de te l'approprier.
- * Exercice 3 : Corrige le jeu ! Celui-ci n’est pas fonctionnel. Tu as tous les éléments dans le code pour comprendre ce qui doit être corrigé.
+ * Exercice 2 : Commenter son code est important ! Commente le code afin de te l'approprier.👍
+ * Exercice 3 : Corrige le jeu ! Celui-ci n’est pas fonctionnel. Tu as tous les éléments dans le code pour comprendre ce qui doit être corrigé.👍
  * La correction comprend deux modifications algorithmiques et des indications à apporter au joueur pour qu’il comprenne ce qu’il a à faire.
  * Exercice 4 : Ajout de fonctionnalités.
- * La V2 du jeu devra proposer la possibilité de rejouer et de stocker les trois meilleurs scores (le score étant le nombre d’essais).
+ * La V2 du jeu devra proposer la possibilité de rejouer et de stocker les trois meilleurs scores (le score étant le nombre d’essais).👍
  * Exercice 5 : Créez les fonctions suivantes et implémentez-les dans votre code :
- * * initNombreMystere
- * * demandeChoixJoueur
- * * isNombreMystereTropPetit
- * * isNombreMystereTropGrand
- * * isNombreMystereTrouvee
+ * * initNombreMystere👍
+ * * demandeChoixJoueur👍
+ * * isNombreMystereTropPetit👍
+ * * isNombreMystereTropGrand👍
+ * * isNombreMystereTrouvee👍
  */
 
 import java.util.Scanner;
