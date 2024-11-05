@@ -24,12 +24,11 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main {
-    // Crée un scanner pour lire les entrées de l'utilisateur
+    /* Crée un scanner pour lire les entrées de l'utilisateur */
     static Scanner scan = new Scanner(System.in);
-    // Crée un tableau pour stocker les trois meilleurs scores et le remplit avec la
-    // valeur maximale possible
+    /* Crée un tableau pour stocker les trois meilleurs scores et le remplit avec la valeur maximale possible */
     static int[] meilleursScores = new int[3];
-    // Variables pour le nombre aléatoire et l'essai de l'utilisateur
+    /* Variables pour le nombre aléatoire et l'essai de l'utilisateur */
     static int nombreRandom;
     static int essai;
 
@@ -50,8 +49,12 @@ public class Main {
             // Affiche les messages de bienvenue et les règles du jeu
             System.out.println("BIENVENUE DANS LE JEU DU NOMBRE MYSTÈRE");
             System.out.println("Le jeu consiste à trouver un nombre compris entre 1 et 100.");
-            System.out.println("Vous avez 5 essais pour réussir ! Prêt ? C'est parti !");
+            System.out.println("Vous avez 5 essais pour réussir !");
 
+            if (!demanderSiPret()) {
+                System.out.println("C'est parti !");
+                continue; // Si l'utilisateur n’est pas prêt, on repose la question
+            }
             // Boucle pour les essais de l'utilisateur
             for (int i = 0; i < nombreEssais; i++) {
                 // Demande à l'utilisateur de choisir un nombre
@@ -99,28 +102,36 @@ public class Main {
         scan.close();
     }
 
-    // Demande à l'utilisateur de choisir un nombre entre 1 et 100
+    /* Demande à l'utilisateur s’il est prêt à jouer ou pas. Si oui, on commence, sinon, on lui repose la question jusqu’à obtenir un oui */
+    private static boolean demanderSiPret() {
+        System.out.println("Vous êtes prêt? (oui/non)");
+        String reponse = scan.next();
+
+        return reponse.equalsIgnoreCase("oui");
+    }
+
+    /* Demande à l'utilisateur de choisir un nombre entre 1 et 100 */
     private static void demandeChoixJoueur() {
-        System.out.println("Choisissez un nombre compris entre 1 et 100");
+        System.out.println("Choisissez un nombre compris entre 1 et 100 : ");
         essai = scan.nextInt();
     }
 
-    // Initialise le nombre mystère avec un nombre aléatoire entre 1 et 100
+    /* Initialise le nombre mystère avec un nombre aléatoire entre 1 et 100 */
     private static void initNombreMystere() {
         nombreRandom = (int) (Math.random() * 100) + 1;
     }
 
-    // Vérifie si l'essai est trop petit
+    /* Vérifie si l'essai est trop petit */
     private static boolean isNombreMystereTropPetit() {
         return essai < nombreRandom;
     }
 
-    // Vérifie si l'essai est trop grand
+    /* Vérifie si l'essai est trop grand */
     private static boolean isNombreMystereTropGrand() {
         return essai > nombreRandom;
     }
 
-    // Vérifie si l'essai est correct
+    /* Vérifie si l'essai est correct */
     private static boolean isNombreMystereTrouvee() {
         return essai == nombreRandom;
     }
