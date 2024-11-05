@@ -56,7 +56,7 @@ public class Main {
             for (int i = 0; i < nombreEssais; i++) {
                 // Demande à l'utilisateur de choisir un nombre
                 demandeChoixJoueur();
-                // Décrémente le nombre d'essais restants
+                // Décrémente le nombre d’essais restants
                 essaisRestants--;
 
                 // Vérifie si l'essai est trop petit
